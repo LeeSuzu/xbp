@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <!-- ⑥↓タイトルを変えてみよう -->
+    <title>第4回</title>
+    <!-- ⑤スタイルシートの設定をしよう --><link rel="stylesheet" href="/css/2.css">
+    <body>
+      
+</head>
+
+<body><div style=" border: 4px solid #ffffff; padding: 2px;"><div style=" background: #e3cbff; font-size: 100%; padding: 20px;"><h1>第4回 ゲーム作成</h1></div></body>
+
+
+    <div>
+        
+         <!-- ①↓に文字を書いてみよう -->
+         <div>
+
+                <h2 style="color:rgb(47, 16, 85)">説明</h2>
+      
+                <br>
+               今回1班は、サッカーのPKゲームを制作することにした。
+
+                <br>
+       
+
+            <h2 style="color:rgb(47, 16, 85)">ソースコード</h2>
+            <br>
+            <code>
+                <ol style="list-style:decimal-leading-zero outside;in-left:0;padding-left:36px;margin:0;background-color:#EEF;color:#000;">
+                <li style="background-color:#EFF;">print("~ PKゲームにようこそ ~")</li>
+                <li style="background-color:#EEF;">name=input("プレイヤー名を入力してください。")</li>
+                <li style="background-color:#EFF;">print(name,"さんは、キッカーです。キーパーを出し抜いてシュートを決めよう！")</li>
+                <li style="background-color:#EEF;">print=0</li>
+                <li style="background-color:#EFF;"></li>
+                <li style="background-color:#EEF;">for i in range(1,5):</li>
+                <li style="background-color:#EFF;">&nbsp;print(i,"戦目")</li>
+                <li style="background-color:#EEF;">&nbsp;print("１．左上　２．左下　３．真ん中　４．右上　５．右下")</li>
+                <li style="background-color:#EFF;">&nbsp;serect=int(input(蹴りたい場所の数字を入力してね))</li>
+                <li style="background-color:#EEF;"></li>
+                <li style="background-color:#EFF;">&nbsp;import random</li>
+                <li style="background-color:#EEF;">&nbsp;a = random.randint(1,5)</li>
+                <li style="background-color:#EFF;">&nbsp;print("キーパーが動いた方向は",a)</li>
+                <li style="background-color:#EEF;">&nbsp;if serect==a:</li>
+                <li style="background-color:#EFF;">&nbsp;&nbsp;print("止められた...。")</li>
+                <li style="background-color:#EEF;">&nbsp;else:</li>
+                <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;print("ナイスシュートだー??")</li>
+                <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;point=point+1</li>
+                <li style="background-color:#EFF;"></li>
+                <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;if point&gt;=3:</li>
+                <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print(name,"さんの結果は...",point,"点獲得で勝利！")</li>
+                <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;elif point&lt;=2:</li>
+                <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print(name,"さんの結果は...",point,"点獲得で敗退...")</li>
+                </ol></code>
+            
+      
+        <ur>
+            <h3 style="color:rgb(47, 16, 85)"><li>反省</li></h3>
+        </ur>
+<br>
+サッカーのPKゲームを作成していて、5回蹴ったのち、3回以上決めることができたら勝利、<br>
+2回以下だったら敗退というように表示したかったのですが、1回蹴る度に敗退という結果が出てしまうように<br>
+なってしまったのが反省です。改善方法を探して、直していきたいです。
+<br>
+<br>
+<br>
+         </div>
+         
+
+
+ 
+    </div>
+
+
+</body>
+</html>
