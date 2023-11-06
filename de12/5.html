@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <!-- ⑥↓タイトルを変えてみよう -->
+    <title>第5回</title>
+    <!-- ⑤スタイルシートの設定をしよう --><link rel="stylesheet" href="/css/2.css">
+    <body>
+      
+</head>
+
+<body><div style=" border: 4px solid #ffffff; padding: 2px;"><div style=" background: #e3cbff; font-size: 100%; padding: 20px;"><h1>第5回 TODOリスト</h1></div></body>
+
+
+    <div>
+        
+         <!-- ①↓に文字を書いてみよう -->
+         <div>
+
+                <h2 style="color:rgb(47, 16, 85)">＜ web ＞</h2>
+      
+                <br>
+               Pythonを利用して、TODOリストを作成することは可能なのか気になったので、Chat GPTを使って「pythonでtodoリスト」と検索をかけてみました。<br>
+               その結果、
+               <br>
+               <br>
+               <code>
+                <ol style="list-style:decimal-leading-zero outside;in-left:0;padding-left:36px;margin:0;background-color:#EEF;color:#000;">
+                <li style="background-color:#EFF;"># 空のToDoリストを作成</li>
+                <li style="background-color:#EEF;">todo_list = []</li>
+                <li style="background-color:#EFF;"></li>
+                <li style="background-color:#EEF;"># ToDoを追加する関数</li>
+                <li style="background-color:#EFF;">def add_todo(todo):</li>
+                <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;todo_list.append(todo)</li>
+                <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print(f"'{todo}' をToDoリストに追加しました！")</li>
+                <li style="background-color:#EEF;"></li>
+                <li style="background-color:#EFF;"># ToDoリストを表示する関数</li>
+                <li style="background-color:#EEF;">def show_todos():</li>
+                <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;if todo_list:</li>
+                <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ToDoリスト:")</li>
+                <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for index, todo in enumerate(todo_list, start=1):</li>
+                <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(f"{index}. {todo}")</li>
+                <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;else:</li>
+                <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ToDoリストは空です！")</li>
+                <li style="background-color:#EFF;"></li>
+                <li style="background-color:#EEF;"># ToDoを削除する関数</li>
+                <li style="background-color:#EFF;">def delete_todo(index):</li>
+                <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;if index &gt; 0 and index &lt;= len(todo_list):</li>
+                <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;deleted_todo = todo_list.pop(index - 1)</li>
+                <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(f"'{deleted_todo}' をToDoリストから削除しました！")</li>
+                <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;else:</li>
+                <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("無効なインデックスです。")</li>
+                <li style="background-color:#EFF;"></li>
+                <li style="background-color:#EEF;"># ユーザーインターフェース</li>
+                <li style="background-color:#EFF;">while True:</li>
+                <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;print("\n操作を選択してください:")</li>
+                <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print("1. ToDoを追加")</li>
+                <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;print("2. ToDoリストを表示")</li>
+                <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print("3. ToDoを削除")</li>
+                <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;print("4. 終了")</li>
+                <li style="background-color:#EFF;"></li>
+                <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;choice = input("選択 (1/2/3/4): ")</li>
+                <li style="background-color:#EFF;"></li>
+                <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;if choice == '1':</li>
+                <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;new_todo = input("追加するToDoを入力してください: ")</li>
+                <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;add_todo(new_todo)</li>
+                <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;elif choice == '2':</li>
+                <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;show_todos()</li>
+                <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;elif choice == '3':</li>
+                <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;show_todos()</li>
+                <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if todo_list:</li>
+                <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;index = int(input("削除するToDoの番号を入力してください: "))</li>
+                <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;delete_todo(index)</li>
+                <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;elif choice == '4':</li>
+                <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("プログラムを終了します。")</li>
+                <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break</li>
+                <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;else:</li>
+                <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("無効な選択です。もう一度お試しください。")</li>
+                <li style="background-color:#EFF;"></li>
+                </ol></code>
+                <br>
+                <br>
+                というPythonのソースコードが出てきました。
+<ur>
+    <h2 style="color:rgb(47, 16, 85)">＜ 実際に使ってみた ＞</h2>
+</ur>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/e5vIuZGD3m4?si=qLtpI4r-BSYtstvO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+       <br>
+       <br>
+       <h2 style="color:rgb(47, 16, 85)">＜ 感想 ＞</h2>
+<br>
+<br>
+<br>
+
+<br>
+<br>
+<br>
+         </div>
+         
+
+
+ 
+    </div>
+
+
+</body>
+</html>

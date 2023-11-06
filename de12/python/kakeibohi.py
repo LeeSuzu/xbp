@@ -1,6 +1,6 @@
 from openpyxl import Workbook
 
-# ワークブックを作成し、アクティブなシートを取得します。
+# ワークブックを作成。アクティブなシートを取得。
 wb = Workbook()
 ws = wb.active
 
@@ -18,4 +18,4 @@ for row in data:
     ws.append(row)
 
 #　ファイルを保存します
-wb.save("家計簿テンプレート.xlsx")
+wb.save("家計簿python.xlsx")
