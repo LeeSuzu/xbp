@@ -12,6 +12,7 @@ def show_todos():
         print("ToDoリスト:")
         for index, todo in enumerate(todo_list, start=1):
             print(f"{index}. {todo}")
+
     else:
         print("ToDoリストは空です！")
 
@@ -34,7 +35,8 @@ while True:
     choice = input("選択 (1/2/3/4): ")
 
     if choice == '1':
-        new_todo = input("追加するToDoを入力してください: ")
+        new_todo = input("予定の日程を入力してください: ")
+        neww_todo = input("追加するToDoを入力してください: ")
         add_todo(new_todo)
     elif choice == '2':
         show_todos()
