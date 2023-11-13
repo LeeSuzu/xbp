@@ -1,6 +1,0 @@
-graph/*.png
-__pycache__
-line_*.py
-station_*.py
-analyzer.py
-main.ipynb
