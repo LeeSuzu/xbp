@@ -13,8 +13,8 @@ logo img{
 
 logotohome img{
     border-radius: 0%;
-    width: 70px;
-    height: 70px;
+    width: 0px;
+    height: 0px;
     object-fit: cover; /* 画像のトリミング */
 }
 
