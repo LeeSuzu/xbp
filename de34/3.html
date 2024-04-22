@@ -2,70 +2,115 @@
 <html lang="jp">
 <head>
     <!-- ⑥↓タイトルを変えてみよう -->
-    <title>第2回 Assignment</title>
-    <!-- ⑤スタイルシートの設定をしよう --><link rel="stylesheet" href="./css/rakuten.css">
-    <body>
-      
+    <title>第3回 Assignment</title>
+    <!-- ⑤スタイルシートの設定をしよう --><link rel="stylesheet" href="./css/digi.css">
+
 </head>
 
-<body><div style=" border: 4px solid #ffffff; padding: 2px;"><div style=" background: #ff9898; font-size: 100%; padding: 20px;"><h1>第2回 Assignment</h1></div></body>
+<body><div style=" border: 4px solid #bdd0ff; padding: 2px;"><div style=" background: #98b3ff; font-size: 100%; padding: 20px;"><h1>第3回 Assignment</h1></div></body>
 
 
+    <div>
+         <!-- ①↓に文字を書いてみよう -->
+         <div>
+            <br>
+            
+            <br>
+            <h2 style="color:rgb(103, 121, 177)">1.IoTとは何か</h2>
+            <br>
+            暗くなったらLEDがつくプログラミング
+            <br>
+            <code>
+                <ol style="list-style:decimal-leading-zero outside;in-left:0;padding-left:36px;margin:0;background-color:#EEF;color:#000;">
+                <li style="background-color:#EFF;">// CdSセルの接続されたピン</li>
+                <li style="background-color:#EEF;">const int LDR_PIN = A1;</li>
+                <li style="background-color:#EFF;"></li>
+                <li style="background-color:#EEF;">// LEDのピン</li>
+                <li style="background-color:#EFF;">const int LED_PIN = 13;</li>
+                <li style="background-color:#EEF;"></li>
+                <li style="background-color:#EFF;">// 光の閾値（調整が必要）</li>
+                <li style="background-color:#EEF;">const int DARK_THRESHOLD = 500;</li>
+                <li style="background-color:#EFF;"></li>
+                <li style="background-color:#EEF;">void setup() {</li>
+                <li style="background-color:#EFF;">&nbsp;&nbsp;// LEDのピンを出力に設定</li>
+                <li style="background-color:#EEF;">&nbsp;&nbsp;pinMode(LED_PIN, OUTPUT);</li>
+                <li style="background-color:#EFF;">&nbsp;&nbsp;</li>
+                <li style="background-color:#EEF;">&nbsp;&nbsp;// シリアルモニタを開始</li>
+                <li style="background-color:#EFF;">&nbsp;&nbsp;Serial.begin(9600);</li>
+                <li style="background-color:#EEF;">}</li>
+                <li style="background-color:#EFF;"></li>
+                <li style="background-color:#EEF;">void loop() {</li>
+                <li style="background-color:#EFF;">&nbsp;&nbsp;// CdSセルからの読み取り値を取得</li>
+                <li style="background-color:#EEF;">&nbsp;&nbsp;int lightLevel = analogRead(LDR_PIN);</li>
+                <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;Serial.println(lightLevel);</li>
+                <li style="background-color:#EEF;">&nbsp;&nbsp;</li>
+                <li style="background-color:#EFF;">&nbsp;&nbsp;// 光の閾値よりもセンサー値が低い場合、LEDを点灯</li>
+                <li style="background-color:#EEF;">&nbsp;&nbsp;if (lightLevel &gt; 500) {</li>
+                <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;digitalWrite(LED_PIN, HIGH);</li>
+                <li style="background-color:#EEF;">&nbsp;&nbsp;} else {</li>
+                <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;digitalWrite(LED_PIN, LOW);</li>
+                <li style="background-color:#EEF;">&nbsp;&nbsp;}</li>
+                <li style="background-color:#EFF;">&nbsp;&nbsp;</li>
+                <li style="background-color:#EEF;">&nbsp;&nbsp;// 少し待つ</li>
+                <li style="background-color:#EFF;">&nbsp;&nbsp;delay(10);</li>
+                <li style="background-color:#EEF;">}</li>
+                <li style="background-color:#EFF;"></li>
+                </ol></code>
 
-        <div>
-            <h2 style="color:rgb(177, 103, 103)">1.IoTとは何か</h2>
+            IoTは "Internet of Things" の略で、「モノのインターネット」という意味。<br>
+            <br>
+            　みんなが普段使っているモノとインターネットが接続されて、情報のやり取りすることができる技術のこと。<br>
+            スマートフォンやスマートウォッチ、家電製品、防犯装置などとインターネットがつながって、データを送受信することができる。<br>
+            それによって遠く離れた場所からデバイスをコントロールしたり、デバイス同士が情報を共有したりすることが可能になる。<br>
             <br>
             <br>
-               <br>
-               <br>
-            <h2 style="color:rgb(177, 103, 103)">2.実験した動画をYoutubeにあげて、自分のHPで見れるようにしておく</h2>
-               <br>
-               <br>
-               <br>
-               <br>
-            <h2 style="color:rgb(177, 103, 103)">3.IoT(遠隔操作)で何ができそうか？グループワークした内容（ポストイット画像）</h2>
+            例）<br>
+            　　・家の外からでもスマートフォンで家の温度を調節できる。<br>
+            　　・家の外からでもスマートフォンで冷蔵庫の中身を確認できる。<br>
+            　　・家にいなくてもスマートフォンでカーテンの開閉ができる。<br>
+            <br>
+            <br>
+            <br>
+            <h2 style="color:rgb(103, 121, 177)">2.実験した動画をYoutubeにあげて、自分のHPで見れるようにしておく</h2>
+           <br>
+            <br>
+            <img src="../de34/images/2/side.jpg" width="40%">
+            <br>
+            <br>
+            ・8階の教室にあるマイコンボード（Arduino）を遠くからでも光らせられることができるのかを実験するために<br>
+            　1階のキャンパスの外に出たところから光らせることができるか試してみた。
+            <br>
+            <br>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/F9S-ggeksQI?si=OvkW8nzViOIuaTvf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <br>
+            <br>
+            <br>
+            <h2 style="color:rgb(103, 121, 177)">3.IoT(遠隔操作)で何ができそうか？グループワークした内容（ポストイット画像）</h2>
             <br>
             <br>
             <img src="../de34/images/2/postit.jpg" width="80%">
             <br>
             <br>
-               <h2 style="color:rgb(177, 103, 103)">4.IoT(遠隔操作)で何ができそうか？自分で考えたアイディア（スケッチ）</h2>
-               <br>
-               <br>
-               <br>
-               <br>
-           </div>
-           <br>
-           <br>
-           <br>
-           
-            
-     <br>
-     <br>
+            <br>
+            <h2 style="color:rgb(103, 121, 177)">4.IoT(遠隔操作)で何ができそうか？自分で考えたアイディア（スケッチ）</h2>
+            <br>
+            <br>
+            <img src="../de34/images/2/colo.jpg" width="80%">
+            <br>
+            <br>
+            ・ランタンとスピーカーが一体になっているもの。<br>
+            <br>
+            　→ 『スピーカー』遠隔で音楽をかけることができる。<br>
+            　→ 『ランタン』スマホでランタンの光の強さや色を調節ができる。<br>
+            <br>
+            <br>
+            <br>
+        </div>
+         <!-- ②↓に画像（imagesフォルダにあるtest.png）を挿入してみよう -->       
+         <!-- ③↓に箇条書きをしてみよう -->
+         <!-- ④↓に外部リンクを作ってみよう -->
+
  
-        
-     <h2 style="color:rgb(177, 103, 103)">楽天市場　発表資料</h2>
-     <br>
-     グループメンバー：9lim / muku / タッカンマリ
-     <br>
-     <br>
-     <br>
-     <div></div>
-     <iframe loading="lazy" src="../images/rakuten.pdf" width="1000px" height="500px" style="border: 0;">
-         <p>
-             Your browser does not support PDF files.
-             <a href="../images/rakuten.pdf">Download the file instead</a>
-         </p>
-     </iframe>
-   </div>
-        
-           <br>
-           <br>
-           <br>
-           <br>
-           <br>
-             
-        
     </div>
 
 
