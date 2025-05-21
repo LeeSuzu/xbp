@@ -27,7 +27,7 @@ html, body {
 	color: #393939;
     margin-left: 15px;
     margin-bottom: 40px;
-	background:#dce5ff;
+	background:#f0dcff;
     ;
 }
 h1{
@@ -50,6 +50,6 @@ p{
 span.blackback{
     text-indent: 3em;
     background: #393939;
-    color: #e1d9ff;
+    color: #f0dcff;
 }
 
